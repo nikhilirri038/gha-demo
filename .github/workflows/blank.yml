@@ -6,7 +6,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Build-step
         run: echo "A Demo build"
+  test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Test-step
+          run: echo "All Test Cases are Passed"
+  Deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Deploy-step
+          run: echo "All are deployed"
