@@ -11,11 +11,13 @@ jobs:
         run: echo "A Demo build"
   test:
       runs-on: ubuntu-latest
+      needs: build
       steps:
         - name: Test-step
           run: echo "All Test Cases are Passed"
   Deploy:
       runs-on: ubuntu-latest
+      needs: test
       steps:
         - name: Deploy-step
           run: echo "All are deployed"
